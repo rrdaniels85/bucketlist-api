@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class GoalsController < ApplicationController
+class GoalsController < OpenReadController
   before_action :set_goal, only: [:update, :destroy]
 
   # GET /goals
@@ -51,7 +51,7 @@ class GoalsController < ApplicationController
   end
 
   def goal_params
-    params.require(:goal).permit(:text)
+    params.require(:goal).permit(:description, :category, :status)
   end
 
   private :set_goal, :goal_params
