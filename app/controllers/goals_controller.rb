@@ -5,7 +5,7 @@ class GoalsController < OpenReadController
   # GET /goals
   # GET /goals.json
   def index
-    @goals = Goal.all
+    @goals = current_user.goals.all
 
     render json: @goals
   end
