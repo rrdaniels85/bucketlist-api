@@ -305,7 +305,19 @@ curl --include --request POST http://localhost:4741/goals \
 Example Response:
 
 ```md
-ENTER HERE
+HTTP/1.1 201 Created
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+ETag: W/"8ba96f9e47500076806336e11ee43828"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: b49dec54-e721-4153-b0a6-60b87ad51449
+X-Runtime: 0.014579
+Vary: Origin
+Transfer-Encoding: chunked
+
+{"goal":{"id":107,"description":"Meet George Washington","category":"Travel","status":"not started"}}
 ```
 
 #### GET /goals
@@ -322,27 +334,25 @@ Example Response:
 
 ```md
 HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
 Content-Type: application/json; charset=utf-8
+ETag: W/"d1c466e66c88d3526f5ee83ec0fbe07c"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 122a92a6-9fda-4367-9d3f-64550d04c6d5
+X-Runtime: 0.007045
+Vary: Origin
+Transfer-Encoding: chunked
 
-{
-  "users": [
-    {
-      "id": 2,
-      "email": "bob@ava.com"
-    },
-    {
-      "id": 1,
-      "email": "ava@bob.com"
-    }
-  ]
-}
+{"goals":[{"id":86,"description":"See Mereen","category":"Travel","status":"Not Started"},{"id":5,"description":"","category":"","status":""},{"id":107,"description":"Meet George Washington","category":"Travel","status":"not started"},{"id":83,"description":"Ride a dragon","category":"Travel","status":"Not started"},{"id":76,"description":"Go to Castle Black","category":"Travel","status":"Completed"},{"id":24,"description":"See a dragon again","category":"Travel","status":"not started"}]}
 ```
 #### PATCH /goals/:id
 
 Example Request:
 
 ```sh
-curl --include --request PATCH http://localhost:4741/goals/${ID} \
+curl --include --request PATCH http://localhost:4741/goals/83 \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=$TOKEN" \
   --data '{
@@ -358,6 +368,13 @@ Example Response:
 
 ```md
 HTTP/1.1 204 No Content
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Cache-Control: no-cache
+X-Request-Id: 8b53ebec-389f-4be0-9e39-b21d7ca2035d
+X-Runtime: 0.014355
+Vary: Origin
 ```
 
 #### DELETE /goals/:id
@@ -365,7 +382,7 @@ HTTP/1.1 204 No Content
 Example Request:
 
 ```sh
-curl --include --request DELETE http://localhost:4741/goals/${ID} \
+curl --include --request DELETE http://localhost:4741/goals/5 \
     --header "Content-Type: application/json" \
     --header "Authorization: Token token=$TOKEN"
 
@@ -375,6 +392,13 @@ Example Response:
 
 ```md
 HTTP/1.1 204 No Content
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Cache-Control: no-cache
+X-Request-Id: 0732c309-cd0a-42f3-b340-5049fa81e47f
+X-Runtime: 0.011799
+Vary: Origin
 ```
 
 

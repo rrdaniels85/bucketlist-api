@@ -1,3 +1,3 @@
-curl --include --request DELETE http://localhost:4741/goals/102 \
+curl --include --request DELETE http://localhost:4741/goals/5 \
     --header "Content-Type: application/json" \
-    --header "Authorization: Token token=BAhJIiViZTgzZDgzMTFkZGQ0YTdiMmVkODdiMzBjMzBiMGNiNAY6BkVG--34d2ad9eb06255ffbb995746bf2450101561f071"
+    --header "Authorization: Token token=BAhJIiUzYTc4OWJlYTZiZDdjYWNlNDdhMzIwNWUyOWQxMzIwYQY6BkVG--7453bbe67b14d6e4ca01e85f0353651d3c882052"

@@ -10,9 +10,9 @@
 #   }'
 
 
-  curl --include --request PATCH http://localhost:4741/goals/102 \
+  curl --include --request PATCH http://localhost:4741/goals/83 \
     --header "Content-Type: application/json" \
-    --header "Authorization: Token token=BAhJIiUyNDIyY2ZiOWZhNDg4MGU2MTUzODE2YjY2NjlmNWU3ZQY6BkVG--92c2a600a7ba411037bf9f9f5bb3e3a726b9e92e" \
+    --header "Authorization: Token token=BAhJIiUzYTc4OWJlYTZiZDdjYWNlNDdhMzIwNWUyOWQxMzIwYQY6BkVG--7453bbe67b14d6e4ca01e85f0353651d3c882052" \
     --data '{
       "goal": {
         "description": "Climb Mount Kilaminjaro",
