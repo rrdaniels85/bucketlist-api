@@ -12,9 +12,9 @@ class GoalsController < ProtectedController
 
   # GET /goals/1
   # GET /goals/1.json
-  def show
-    render json: Goal.find(params[:id])
-  end
+  # def show
+  #   render json: Goal.find(params[:id])
+  # end
 
   def create
     #    @goal = Goal.new(goal_params)
