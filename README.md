@@ -275,6 +275,109 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
+
+### GOALS
+
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/goals`               | `goals#create`    |
+| GET    | `/goals`               | `goals#index`     |
+| PATCH  | `/goals/:id`           | `goals#update`    |
+| DELETE | `/goals/:id`           | `goals#destroy`   |
+
+#### POST /create
+
+Example Request:
+
+```sh
+curl --include --request POST http://localhost:4741/goals \
+  --header "Content-Type: application/json" \
+  --header "Authorization: Token token=$TOKEN" \
+  --data '{
+    "goal": {
+      "description": "Climb a mountain",
+      "category": "Outdoor",
+      "status": "not started"
+    }
+  }'
+```
+
+Example Response:
+
+```md
+ENTER HERE
+```
+
+#### GET /goals
+
+Request Example:
+
+```sh
+curl --include --request GET http://localhost:4741/goals \
+  --header "Content-Type: application/json" \
+  --header "Authorization: Token token=$TOKEN"
+```
+
+Example Response:
+
+```md
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+{
+  "users": [
+    {
+      "id": 2,
+      "email": "bob@ava.com"
+    },
+    {
+      "id": 1,
+      "email": "ava@bob.com"
+    }
+  ]
+}
+```
+#### PATCH /goals/:id
+
+Example Request:
+
+```sh
+curl --include --request PATCH http://localhost:4741/goals/${ID} \
+  --header "Content-Type: application/json" \
+  --header "Authorization: Token token=$TOKEN" \
+  --data '{
+    "goal": {
+      "description": "Climb a mountain",
+      "category": "Outdoor",
+      "status": "not started"
+    }
+  }'
+```
+
+Example Response:
+
+```md
+HTTP/1.1 204 No Content
+```
+
+#### DELETE /goals/:id
+
+Example Request:
+
+```sh
+curl --include --request DELETE http://localhost:4741/goals/${ID} \
+    --header "Content-Type: application/json" \
+    --header "Authorization: Token token=$TOKEN"
+
+```
+
+Example Response:
+
+```md
+HTTP/1.1 204 No Content
+```
+
+
 ### Reset Database without dropping
 
 This is not a task developers should run often, but it is sometimes necessary.

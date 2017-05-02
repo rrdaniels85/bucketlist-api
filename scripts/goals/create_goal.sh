@@ -1,13 +1,13 @@
-# curl --include --request POST http://localhost:4741/goals \
-#   --header "Content-Type: application/json" \
-#   --header "Authorization: Token token=$TOKEN" \
-#   --data '{
-#     "goal": {
-#       "description": "Climb a mountain",
-#       "category": "Outdoor",
-#       "status": "not started"
-#     }
-#   }'
+curl --include --request POST http://localhost:4741/goals \
+  --header "Content-Type: application/json" \
+  --header "Authorization: Token token=$TOKEN" \
+  --data '{
+    "goal": {
+      "description": "Climb a mountain",
+      "category": "Outdoor",
+      "status": "not started"
+    }
+  }'
 
 
   curl --include --request POST http://localhost:4741/goals \
