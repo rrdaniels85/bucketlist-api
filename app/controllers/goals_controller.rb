@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class GoalsController < OpenReadController
+class GoalsController < ProtectedController
   before_action :set_goal, only: [:update, :destroy]
 
   # GET /goals
